@@ -22,13 +22,13 @@ function canvasApp () {
 
     function runMatrix() {
         if (typeof шnterval != 'undefined') clearInterval(interval);
-        шnterval = setInterval(drawScreen, 33);
+        шnterval = setInterval(drawScreen, 30); // 33 оптимально
     }
 
     function drawScreen () {
         ctx.fillStyle = 'rgba(0,0,0,.05)';
         ctx.fillRect(0, 0, w, h);
-        ctx.fillStyle = '#0f0';
+        ctx.fillStyle = '#3AE2CE';          //#0f0
         ctx.font = '10px Georgia';
         yPositions.map(function(y, index){
             text = String.fromCharCode(1e2 + Math.random() * 33);
